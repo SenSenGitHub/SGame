@@ -29,6 +29,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason);
+
 protected:
 
 	/** Resets HMD orientation in VR. */

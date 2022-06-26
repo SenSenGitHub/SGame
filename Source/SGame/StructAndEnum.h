@@ -10,6 +10,8 @@
 /**
  * 
  */
+
+ ///UI 配置表
  USTRUCT(BlueprintType)
 struct FUIConfig:public FTableRowBase
  {
@@ -24,9 +26,9 @@ struct FUIConfig:public FTableRowBase
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(DisplayName="是否关闭其他界面"))
 		bool IsCloseOther=false;
 
-
-
  };
+
+
 
 UCLASS()
 class SGAME_API UStructAndEnum : public UObject

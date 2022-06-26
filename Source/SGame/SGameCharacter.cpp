@@ -1,6 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SGameCharacter.h"
+#include "UnLuaBase.h"
+#include "UnLua.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -45,6 +47,12 @@ ASGameCharacter::ASGameCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+void ASGameCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	UnLua::CallTableFunc(UnLua::GetState(),"UI","CloseAllUI");
+	Super::EndPlay(EndPlayReason);
 }
 
 //////////////////////////////////////////////////////////////////////////

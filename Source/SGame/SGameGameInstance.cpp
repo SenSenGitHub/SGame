@@ -3,6 +3,8 @@
 #include "SGameGameInstance.h"
 #include "UnLuaBase.h"
 #include "UnLua.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
+#include "Blueprint/UserWidget.h"
 
 TWeakObjectPtr<USGameGameInstance> USGameGameInstance::SelfPtr = nullptr;
 
@@ -24,6 +26,6 @@ void USGameGameInstance::Init()
 
 void USGameGameInstance::Shutdown()
 {
-	Super::Shutdown();
 	UnLua::CallTableFunc(UnLua::GetState(),"UI","CloseAllUI");
+	Super::Shutdown();
 }
