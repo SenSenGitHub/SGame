@@ -60,7 +60,7 @@ end
 ---打开UI
 ---@param Name string 打开UI的主键
 function UI.OpenUI(Name,...)
-    Err("1")
+    Err("Name")
     if UI.UIAll[Name] ~= nil then
         Err("UI已经打开")
         return

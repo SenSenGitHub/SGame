@@ -5,7 +5,7 @@ local SGame=Class()
 
 function SGame:ReceiveBeginPlay()
     GetGameInstance()
-    UI.OpenUI("main",self)
+    UI.OpenUI("login",self)
 end
 
 return SGame
