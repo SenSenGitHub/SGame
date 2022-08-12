@@ -8,6 +8,18 @@ public class SGame : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG","UnLua","Lua"});
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core",
+			"CoreUObject",
+			"Engine", 
+			"InputCore", 
+			"HeadMountedDisplay", 
+			"UMG",
+			"UnLua",
+			"Lua",
+			"GAMEPLAYABILITIES",
+			"GAMEPLAYTASKS"
+		});
 	}
 }
