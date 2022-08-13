@@ -5,10 +5,11 @@
 
 UUserWidget* UBPFunLib::GetWidgetOuter(UWidget* InWidget)
 {
-	if (nullptr == InWidget) return  nullptr;
+	if (nullptr == InWidget) return nullptr;
 	if (const auto SelfWidget = Cast<UUserWidget>(InWidget)) return SelfWidget;
 	UObject* OuterObj = InWidget->GetOuter();
-	while (OuterObj) {
+	while (OuterObj)
+	{
 		if (const auto OuterWidget = Cast<UUserWidget>(OuterObj)) return OuterWidget;
 		OuterObj = OuterObj->GetOuter();
 	}
@@ -33,7 +34,6 @@ void UBPFunLib::LoadUIConfig(TMap<FString, FUIConfig>& Config)
 			Config.Add(KV.Key.ToString(), *Find);
 		}
 	}
-
 }
 
 void UBPFunLib::AddToRoot(UObject* Obj)

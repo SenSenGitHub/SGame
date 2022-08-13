@@ -14,6 +14,3 @@ class ASGameGameMode : public AGameModeBase
 public:
 	ASGameGameMode();
 };
-
-
-

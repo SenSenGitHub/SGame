@@ -17,8 +17,7 @@ class SGAME_API USGameAbilitySystemComponent : public UAbilitySystemComponent
 public:
 	USGameAbilitySystemComponent();
 
-	
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,meta=(DisplayName="普通攻击技能"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(DisplayName="普通攻击技能"))
 	TSoftClassPtr<USGameGameplayAbility> Attack;
 };

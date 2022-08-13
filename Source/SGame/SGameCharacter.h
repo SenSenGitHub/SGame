@@ -32,7 +32,6 @@ public:
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason);
 
 protected:
-
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
 
@@ -71,4 +70,3 @@ public:
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 };
-

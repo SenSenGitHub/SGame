@@ -11,28 +11,37 @@
  * 
  */
 
- ///UI 配置表
- USTRUCT(BlueprintType)
-struct FUIConfig:public FTableRowBase
- {
+///UI 配置表
+USTRUCT(BlueprintType)
+struct FUIConfig : public FTableRowBase
+{
 	GENERATED_USTRUCT_BODY()
- public:
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(MetaClass=UserWidget,AllowAbstract=0,DisplayName="UI界面"))
-		FSoftClassPath WidgetClass;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(DisplayName="层级"))
-		int32 Level=0;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(DisplayName="是否入栈"))
-		bool IsStack=false;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(DisplayName="是否关闭其他界面"))
-		bool IsCloseOther=false;
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(MetaClass=UserWidget, AllowAbstract=0, DisplayName="UI界面"))
+	FSoftClassPath WidgetClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="层级"))
+	int32 Level = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="是否入栈"))
+	bool IsStack = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="是否关闭其他界面"))
+	bool IsCloseOther = false;
+};
 
- };
-
+//角色组件配置表
+USTRUCT(BlueprintType)
+struct FCharacterComponentConfig : public FTableRowBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Pawn"))
+	TSoftClassPtr<ACharacter> Character;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(MetaClass=ActorComponent, DisplayName="组件"))
+	TArray<FSoftClassPath> Components;
+};
 
 
 UCLASS()
 class SGAME_API UStructAndEnum : public UObject
 {
 	GENERATED_BODY()
-	
 };

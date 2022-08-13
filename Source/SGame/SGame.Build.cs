@@ -12,9 +12,9 @@ public class SGame : ModuleRules
 		{
 			"Core",
 			"CoreUObject",
-			"Engine", 
-			"InputCore", 
-			"HeadMountedDisplay", 
+			"Engine",
+			"InputCore",
+			"HeadMountedDisplay",
 			"UMG",
 			"UnLua",
 			"Lua",

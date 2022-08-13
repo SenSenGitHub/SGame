@@ -20,13 +20,11 @@ class SGAME_API UBPFunLib : public UBlueprintFunctionLibrary
 public:
 	/**************         UMG         ***************/
 	UFUNCTION(BlueprintCallable, Category = "UMG")
-		static UUserWidget* GetWidgetOuter(UWidget* InWidget);
+	static UUserWidget* GetWidgetOuter(UWidget* InWidget);
 	UFUNCTION(BlueprintCallable, Category = "UMG")
-		static void LoadUIConfig(TMap<FString, FUIConfig>& Config);
+	static void LoadUIConfig(TMap<FString, FUIConfig>& Config);
 	UFUNCTION(BlueprintCallable, Category = "UMG")
-		static void AddToRoot(UObject* Obj);
+	static void AddToRoot(UObject* Obj);
 	UFUNCTION(BlueprintCallable, Category = "UMG")
-		static void RemoveToRoot(UObject* Obj);
-
-
+	static void RemoveToRoot(UObject* Obj);
 };

@@ -15,6 +15,5 @@ class SGAME_API USGameSaveGame : public USaveGame
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
-		FString Test;
-	
+	FString Test;
 };

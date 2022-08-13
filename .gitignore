@@ -16,7 +16,7 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
+
 
 # Fortran module files
 *.mod
@@ -48,7 +48,6 @@ SourceArt/**/*.png
 SourceArt/**/*.tga
 
 # Binary Files
-Binaries/*
 Plugins/*/Binaries/*
 Plugins/*/Developer/*
 Plugins/Developer/*
@@ -59,10 +58,12 @@ Build/*
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
 Build/*/**
+Binaries/*/**
 !Build/*/PakBlacklist*.txt
 
 # Don't ignore icon files in Build
 !Build/**/*.ico
+!Binaries/*/UnrealEditor-SGame.dll
 
 # Built data for maps
 *_BuiltData.uasset

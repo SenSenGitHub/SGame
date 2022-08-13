@@ -13,5 +13,4 @@ UCLASS()
 class SGAME_API USGameGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
-	
 };

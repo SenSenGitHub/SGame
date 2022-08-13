@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StructAndEnum.h"
 #include "Engine/GameInstance.h"
 #include "SGameGameInstance.generated.h"
 
@@ -17,10 +18,15 @@ public:
 	static TWeakObjectPtr<USGameGameInstance> SelfPtr;
 
 	UFUNCTION(BlueprintCallable)
-		static USGameGameInstance* GET();
+	static USGameGameInstance* GET();
 
+	UFUNCTION(BlueprintCallable, Category="Tool")
+	static const FCharacterComponentConfig GetCharacterComponentConfig(ACharacter* Character);
 
 	virtual void Init() override;
 	virtual void Shutdown() override;
 
+protected:
+	UPROPERTY()
+	TMap<FName, FCharacterComponentConfig> CharacterComponentCfg;
 };
